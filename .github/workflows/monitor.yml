@@ -1,0 +1,28 @@
+name: PageSpeed Monitor
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour on the dot
+  workflow_dispatch: # Allows you to click a button to run it manually
+
+jobs:
+  run-monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run script
+        env:
+          apikey: ${{ secrets.apikey }}
+          webhook_url: ${{ secrets.webhook_url }}
+        run: python monitor.py
