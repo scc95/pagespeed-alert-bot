@@ -7,11 +7,11 @@ Automated website performance monitoring tool built with Python and GitHub Actio
 ## Features
 - **Automated Scanning:** Runs on a schedule (every hour) with GitHub Actions.
 - **Instant Alerts:** Sends detailed notifications to Discord via Webhooks.
-- **CSV Logging:** Generates a sitewarnings.csv to track performance dips over time.
+- **CSV Logging:** Generates a sitewarnings.csv to track performance dips over time. Please note, this is not kept with Github Actions
 - **Secure:** Uses GitHub Secrets to manage API keys and Webhook URLs safely.
 
 ## Built With
-- **Python 3.10**
+- **Python 3.12**
 - **Google PageSpeed Insights API v5**
 - **GitHub Actions** (CI/CD & Scheduling)
 - **Discord Webhooks**
