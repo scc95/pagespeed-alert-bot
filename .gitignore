@@ -1,0 +1,10 @@
+# Security: Never upload API keys or secrets
+.env
+
+# Data: Don't upload your local log files (unless you want to)
+sitewarnings.csv
+
+# Python: Ignore temporary system files
+__pycache__/
+*.py[cod]
+*$py.class
